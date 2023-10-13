@@ -1,7 +1,7 @@
-const { Goal, Step, processStep }  = require('./model.js')
+const { Goal, Step, cueStep }  = require('./model.js')
 const router = require('express').Router()
 
-// get all steps and process steps
+// get all steps and cue steps
 router.get('/steps/all', async (request, response) => {
   const steps = await Step.find({})
   response.json(steps)
@@ -14,10 +14,10 @@ router.get('/goals', async (request, response) => {
   response.json(goals)
 })
 
-// add an array of new process steps
-router.post('/process', async (request, response) => {
+// add an array of new cue steps
+router.post('/cue', async (request, response) => {
   try {
-    const result = await processStep.insertMany(request.body)
+    const result = await cueStep.insertMany(request.body)
     response.status(201).json(result)
   } catch (exception) {
     response.status(400)
@@ -26,8 +26,6 @@ router.post('/process', async (request, response) => {
 
 // add new steps
 router.post('/step', async (request, response) => {
-  console.log('in POST')
-  console.log(request.body)
   try {
     const result = new Step(request.body)
     const step = await result.save()

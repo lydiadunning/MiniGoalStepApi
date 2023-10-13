@@ -12,7 +12,7 @@ const stepSchema = new Schema ({
 })
 const Step = model('Step', stepSchema)
 
-const processStep = Step.discriminator('Process', new Schema({ active: Boolean }))
+const cueStep = Step.discriminator('Cue', new Schema({ active: Boolean }))
 
 const goalSchema = new Schema ({
   goalName: {
@@ -37,4 +37,4 @@ const Goal = model('Goal', goalSchema)
 
 
 
-module.exports = { Goal, Step, processStep }
+module.exports = { Goal, Step, cueStep }

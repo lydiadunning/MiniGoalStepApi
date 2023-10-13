@@ -1,4 +1,4 @@
-POST http://localhost:2002/api/process
+POST http://localhost:2002/api/cue
 Content-Type: application/json
 
 [
