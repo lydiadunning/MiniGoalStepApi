@@ -1,0 +1,7 @@
+POST http://localhost:2002/api/step
+Content-Type: application/json
+
+{
+  "step": "Adventure",
+  "completed": "false"
+}

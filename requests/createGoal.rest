@@ -1,0 +1,12 @@
+POST http://localhost:2002/api/goal
+Content-Type: application/json
+
+{
+  "goalName": "Climb the Mountain",
+  "steps": [
+    "65298305b0349059a75df287",
+    "65298305b0349059a75df289",
+    "652984c24178ad4abfd36a6f"
+  ],
+  "completed": false
+}

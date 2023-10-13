@@ -1,0 +1,20 @@
+POST http://localhost:2002/api/process
+Content-Type: application/json
+
+[
+  {
+    "step": "Go Fast",
+    "completed": false,
+    "active": true
+  },
+  {
+    "step": "Be Amazing",
+    "completed": false,
+    "active": true
+  },
+  {
+    "step": "Run Away",
+    "completed": false,
+    "active": true
+  }
+]
