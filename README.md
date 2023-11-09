@@ -65,12 +65,13 @@ const goalSchema = new Schema ({
 
 ## Conclusion
 
-Discriminators are a better solution for my current problem than what I had tried previously. 
+Discriminators are a better solution for my current problem than what I had tried previously.
+Edit: Nope. This wasn't actually a problem at all, and required no solution. 
 
 ## Try it Out 
 
 To launch this api, download a copy, install dependencies, and add a .env file to the root directory with a MongoDB connection URI.
 ```
-MONGODB_URI= Your MongoDB URI goes here. 
+MONGODB_URI= *Your MongoDB URI goes here* 
 ```
 Launch with the command `npm run dev`.  Since the api only exists to trial solutions for a problem, it's only set up to run the development version.
